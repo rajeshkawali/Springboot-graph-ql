@@ -1,5 +1,8 @@
 package com.rajeshkawali.model;
 
+/**
+ * @author Rajesh_Kawali
+ */
 public enum SmoothiePreference {
 
     STRAWBERRY_BANANA("Strawberry Banana"),
