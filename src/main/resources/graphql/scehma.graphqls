@@ -1,0 +1,32 @@
+
+type Customer {
+    id: ID!
+    firstName: String
+    lastName: String
+    smoothiePreference: SmoothiePreference
+    mobileNumber: Float
+}
+
+enum SmoothiePreference {
+    STRAWBERRY_BANANA
+    MANGO_PINEAPPLE
+    BLUEBERRY_SPINACH
+    CHOCOLATE_PEANUT_BUTTER
+    GREEN_DETOX
+    AVOCADO_CUCUMBER
+    PEACH_GINGER
+    MIXED_BERRY
+    TROPICAL_TWIST
+    CARAMEL_LATTE
+}
+
+type Query {
+    getAllCustomer: [Customer]
+    getCustomerById(id: ID): Customer
+}
+
+type Mutation {
+    addCustomer(id: Int!, firstName: String!, lastName: String!, smoothiePreference: SmoothiePreference!, mobileNumber: Float!): Customer
+    updateCustomer(id: Int!, firstName: String!, lastName: String!, smoothiePreference: SmoothiePreference!, mobileNumber: Float!): Customer
+    deleteCustomer(id: ID): String
+}
